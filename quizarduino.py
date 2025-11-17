@@ -7,8 +7,8 @@ def mostrar_informacoes_iniciais():
     print("\n==============================")
     print("        QUIZ ARDUINO")
     print("==============================")
-    print("📘 Matéria: Programação e Algoritmo")
-    print("\n👥 Grupo:")
+    print(" Matéria: Programação e Algoritmo")
+    print("\n Grupo:")
     print("• Maria Eduarda Pinto de Oliveira Rodrigues")
     print("• Mariana Rasmussen Rezende Alves")
     print("• Natan Alexandro Silva Costa")
@@ -233,10 +233,10 @@ def mostrar_menu():
 def mostrar_regras():
     print("\n===== REGRAS DO QUIZ =====")
     print("• 20 perguntas sorteadas das 50 disponíveis.")
-    print("• Cada questão vale 0,5 ponto.")
-    print("• Nota máxima: 10 pontos.")
+    print("• Cada questão vale 1 ponto.")
+    print("• Nota máxima: 20 pontos.")
     print("• Alternativas são embaralhadas a cada execução.")
-    print("• Digite apenas A, B, C, D ou E.\n")
+    print("• Digite A, B, C, D ou E.\n")
 
 def sortear_questoes():
     return random.sample(perguntas, 20)
@@ -246,7 +246,9 @@ def exibir_questao(q, numero):
     # Embaralhara alternativas
     alternativas = list(q['alternativas'])
     random.shuffle(alternativas)
+    
     # Salvar mapa de letras para verificar resposta
+
     letra_corretas = {letra: alt for letra, alt in zip("ABCDE", alternativas)}
     for letra, alt in letra_corretas.items():
         print(f"{letra}) {alt}")
@@ -265,11 +267,11 @@ def verificar_resposta(q, mapa):
             return resposta == correta_letra
 
 def exibir_resultado(acertos):
-    nota = acertos * 0.5
-    print("\n===== RESULTADO FINAL =====")
+    nota = acertos
+    print("\n_____ RESULTADO FINAL _____")
     print(f"Acertos: {acertos}/20")
-    print(f"Nota final: {nota:.1f} / 10.0")
-    print("============================\n")
+    print(f"Nota final: {nota:.1f} / 20.0")
+    print("_____________________________\n")
 
 def iniciar_quiz():
     questoes = sortear_questoes()
