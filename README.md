@@ -1,8 +1,8 @@
 # Quiz-Python
 Repositori do quiz de arduino em python
 
- print("\n👥 Grupo:")
-    print("• Maria Eduarda Pinto de Oliveira Rodrigues")
-    print("• Mariana Rasmussen Rezende Alves")
-    print("• Natan Alexandro Silva Costa")
-    print("• Pietro Fiorese Dopp")
+ p👥 Grupo:
+    • Maria Eduarda Pinto de Oliveira Rodrigues
+    • Mariana Rasmussen Rezende Alves
+    • Natan Alexandro Silva Costa
+    • Pietro Fiorese Dopp
